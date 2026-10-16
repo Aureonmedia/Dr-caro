@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhon Fredy Caro | Psicólogo Clínico & Transgeneracional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arbol: {
+                            verdeOscuro: '#2D5A27',
+                            verdeClaro: '#689F38',
+                            tronco: '#A06334',
+                            raiz: '#79471E',
+                            fruto: '#D32F2F',
+                        },
+                        bosque: '#0F241D',
+                        tierra: '#FAF7F2',
+                        arena: '#F2E9DE',
+                        profundo: '#0D1E2D',
+                        esmeralda: '#1C4A3A'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #689F38;
+            border-radius: 4px;
+        }
+        .pulse-soft {
+            animation: pulseCustom 2.5s infinite;
+        }
+        @keyframes pulseCustom {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 20px 35px -5px rgba(37, 211, 102, 0.6); }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYwIDE2MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gUmHDrWNlcyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTc4IDEyOCBDNjUgMTMyIDQ1IDEzNiAzMiAxMzggQzQyIDEzMiA1OCAxMjYgNzIgMTIyIiBzdHJva2U9IiM3OTQ3MUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTgyIDEyOCBDOTUgMTMzIDExNSAxMzggMTI4IDE0MCBDMTE4IDEzMyAxMDIgMTI2IDg4IDEyMiIgc3Ryb2tlPSIjNzk0NzFFIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCAxMjUgQzgwIDEzNCA3OCAxNDQgNzUgMTUwIEM4MCAxNDUgODMgMTM2IDgzIDEyNSIgc3Ryb2tlPSIjQTA2MzM0IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8IS0tIFRyb25jbyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTcyIDEyMiBDNzAgOTUgNjIgODIgNTQgNzUgQzY2IDc5IDcyIDkwIDc1IDEyMCIgZmlsbD0iI0EwNjMzNCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNzggMTIyIEM3OSA5MiA4MSA3NiA3NCA2MiBDODIgNzIgODQgODggODQgMTIyIiBmaWxsPSIjQkE3OTQyIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04NyAxMjIgQzg5IDk1IDk4IDgzIDEwNiA3NSBDOTQgODAgODggOTIgODUgMTIwIiBmaWxsPSIjQTA2MzM0Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gRm9sbGFqZSAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMzgiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM2ODlGMzgiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjY0IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC0yNSA2NCA0NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9Ijk2IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDI1IDk2IDQ0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI1NiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iIzRDQUY1MCIgdHJhbnNmb3JtPSJyb3RhdGUoLTUwIDUwIDU2KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iMTEwIiBjeT0iNTYiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKDUwIDExMCA1NikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjQwIiBjeT0iNzQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiMyRTdEMzIiIHRyYW5zZm9ybT0icm90YXRlKC03MCA0MCA3NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjEyMCIgY3k9Ijc0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSg3MCAxMjAgNzQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIzOCIgY3k9Ijk0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNjg5RjM4IiB0cmFuc2Zvcm09InJvdGF0ZSgtODUgMzggOTQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMjIiIGN5PSI5NCIgcng9IjciIHJ5PSIxMyIgZmlsbD0iIzJFN0QzMiIgdHJhbnNmb3JtPSJyb3RhdGUoODUgMTIyIDk0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTIiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC02NSA1MiAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMDgiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDY1IDEwOCAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI2MiIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjMkU3RDMyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTUgNjIgNjIpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI5OCIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSA5OCA2MikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPCEtLSBGcnV0b3MgUm9qb3MgLS0+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjY4IiBjeT0iNjgiIHI9IjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iOTIiIGN5PSI2OCIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSI1OCIgY3k9Ijg4IiByPSI0LjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iODAiIGN5PSI1MiIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMDIiIGN5PSI4OCIgcj0iNC41IiBmaWxsPSIjRDMyRjJGIi8+CiAgICAgICAgICAgICAgICAgICAgPC9zdmc+Cg==">
+</head>
+<body class="bg-tierra text-[#2C3E50] font-sans antialiased selection:bg-arbol-verdeOscuro selection:text-white flex flex-col min-h-screen">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo Oficial de la Marca (Árbol Vectorial Fiel) -->
+            <button onclick="switchView('inicio')" class="flex items-center space-x-3.5 group text-left focus:outline-none">
+                <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYwIDE2MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gUmHDrWNlcyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTc4IDEyOCBDNjUgMTMyIDQ1IDEzNiAzMiAxMzggQzQyIDEzMiA1OCAxMjYgNzIgMTIyIiBzdHJva2U9IiM3OTQ3MUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTgyIDEyOCBDOTUgMTMzIDExNSAxMzggMTI4IDE0MCBDMTE4IDEzMyAxMDIgMTI2IDg4IDEyMiIgc3Ryb2tlPSIjNzk0NzFFIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCAxMjUgQzgwIDEzNCA3OCAxNDQgNzUgMTUwIEM4MCAxNDUgODMgMTM2IDgzIDEyNSIgc3Ryb2tlPSIjQTA2MzM0IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8IS0tIFRyb25jbyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTcyIDEyMiBDNzAgOTUgNjIgODIgNTQgNzUgQzY2IDc5IDcyIDkwIDc1IDEyMCIgZmlsbD0iI0EwNjMzNCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNzggMTIyIEM3OSA5MiA4MSA3NiA3NCA2MiBDODIgNzIgODQgODggODQgMTIyIiBmaWxsPSIjQkE3OTQyIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04NyAxMjIgQzg5IDk1IDk4IDgzIDEwNiA3NSBDOTQgODAgODggOTIgODUgMTIwIiBmaWxsPSIjQTA2MzM0Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gRm9sbGFqZSAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMzgiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM2ODlGMzgiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjY0IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC0yNSA2NCA0NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9Ijk2IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDI1IDk2IDQ0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI1NiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iIzRDQUY1MCIgdHJhbnNmb3JtPSJyb3RhdGUoLTUwIDUwIDU2KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iMTEwIiBjeT0iNTYiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKDUwIDExMCA1NikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjQwIiBjeT0iNzQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiMyRTdEMzIiIHRyYW5zZm9ybT0icm90YXRlKC03MCA0MCA3NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjEyMCIgY3k9Ijc0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSg3MCAxMjAgNzQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIzOCIgY3k9Ijk0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNjg5RjM4IiB0cmFuc2Zvcm09InJvdGF0ZSgtODUgMzggOTQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMjIiIGN5PSI5NCIgcng9IjciIHJ5PSIxMyIgZmlsbD0iIzJFN0QzMiIgdHJhbnNmb3JtPSJyb3RhdGUoODUgMTIyIDk0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTIiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC02NSA1MiAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMDgiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDY1IDEwOCAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI2MiIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjMkU3RDMyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTUgNjIgNjIpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI5OCIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSA5OCA2MikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPCEtLSBGcnV0b3MgUm9qb3MgLS0+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjY4IiBjeT0iNjgiIHI9IjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iOTIiIGN5PSI2OCIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSI1OCIgY3k9Ijg4IiByPSI0LjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iODAiIGN5PSI1MiIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMDIiIGN5PSI4OCIgcj0iNC41IiBmaWxsPSIjRDMyRjJGIi8+CiAgICAgICAgICAgICAgICAgICAgPC9zdmc+Cg==" alt="Logo de Jhon Fredy Caro" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform" width="160" height="160">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-serif font-bold text-gray-900 leading-none">Jhon Fredy Caro</span>
+                    <span class="text-[11px] uppercase tracking-[0.22em] text-arbol-verdeOscuro font-bold mt-1">Psicólogo Clínico</span>
+                </div>
+            </button>
+
+            <!-- Menú de Secciones Delineadas Desktop -->
+            <nav class="hidden lg:flex items-center space-x-1 font-semibold text-xs uppercase tracking-wider text-gray-600">
+                <button onclick="switchView('inicio')" id="tab-inicio" class="nav-tab px-4 py-2 rounded-xl transition-all text-arbol-verdeOscuro bg-arbol-verdeOscuro/10 font-bold">
+                    Inicio
+                </button>
+                <button onclick="switchView('ancestros')" id="tab-ancestros" class="nav-tab px-4 py-2 rounded-xl transition-all hover:text-arbol-verdeOscuro hover:bg-stone-100">
+                    Ancestros
+                </button>
+                <button onclick="switchView('madre')" id="tab-madre" class="nav-tab px-4 py-2 rounded-xl transition-all hover:text-arbol-verdeOscuro hover:bg-stone-100">
+                    Vínculo Materno
+                </button>
+                <button onclick="switchView('duelos')" id="tab-duelos" class="nav-tab px-4 py-2 rounded-xl transition-all hover:text-arbol-verdeOscuro hover:bg-stone-100">
+                    Exparejas & Duelos
+                </button>
+                <button onclick="switchView('contacto')" id="tab-contacto" class="nav-tab px-4 py-2 rounded-xl transition-all hover:text-arbol-verdeOscuro hover:bg-stone-100">
+                    Contacto
+                </button>
+            </nav>
+
+            <!-- Acceso Directo de Cita -->
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/573183332539?text=Hola%20Dr.%20Jhon%20Fredy%20Caro,%20deseo%20agendar%20una%20consulta%20psicol%C3%B3gica" 
+                   target="_blank" 
+                   class="hidden sm:inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-arbol-verdeOscuro hover:bg-emerald-900 text-white text-xs uppercase tracking-wider font-bold transition-all shadow-md">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Agendar Cita</span>
+                </a>
+                <button id="mobile-toggle" aria-label="Abrir menú" class="lg:hidden text-gray-700 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-dropdown" class="hidden lg:hidden bg-white border-b border-stone-200 px-6 py-5 space-y-3 shadow-xl">
+            <button onclick="switchView('inicio'); closeMobileMenu();" class="block w-full text-left py-2 font-bold text-gray-800 border-b border-stone-100">Inicio & Presentación</button>
+            <button onclick="switchView('ancestros'); closeMobileMenu();" class="block w-full text-left py-2 font-bold text-gray-800 border-b border-stone-100">Enfoque de los Ancestros</button>
+            <button onclick="switchView('madre'); closeMobileMenu();" class="block w-full text-left py-2 font-bold text-gray-800 border-b border-stone-100">Vínculo Materno & Poema</button>
+            <button onclick="switchView('duelos'); closeMobileMenu();" class="block w-full text-left py-2 font-bold text-gray-800 border-b border-stone-100">Exparejas & Duelos</button>
+            <button onclick="switchView('contacto'); closeMobileMenu();" class="block w-full text-left py-2 font-bold text-gray-800 border-b border-stone-100">Contacto & Agendamiento</button>
+            <a href="https://wa.me/573183332539" target="_blank" class="w-full inline-flex items-center justify-center space-x-2 px-4 py-3 rounded-xl bg-arbol-verdeOscuro text-white text-xs font-bold uppercase tracking-wider mt-2">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>Escribir al WhatsApp (318 333 2539)</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+
+        <!-- ================= SECCIÓN: INICIO ================= -->
+        <section id="view-inicio" class="view-panel block">
+            
+            <!-- Hero Principal -->
+            <div class="relative bg-gradient-to-b from-arena/60 via-tierra to-white py-16 sm:py-24 border-b border-stone-200">
+                <div class="max-w-5xl mx-auto px-6 text-center">
+                    
+                    <!-- Insignia Principal de Sección -->
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-arbol-verdeOscuro/10 border border-arbol-verdeOscuro/20 text-arbol-verdeOscuro text-xs sm:text-sm font-bold tracking-wide mb-6">
+                        <i class="fa-solid fa-tree text-arbol-verdeClaro"></i>
+                        <span>Psicoterapia Sistémica & Psicogenealogía · Colombia</span>
+                    </div>
+
+                    <!-- Gran Logo de Marca como centro visual (Sin foto del doctor) -->
+                    <div class="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8 p-3 rounded-3xl bg-white shadow-xl border border-stone-200/80 flex items-center justify-center">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYwIDE2MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gUmHDrWNlcyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTc4IDEyOCBDNjUgMTMyIDQ1IDEzNiAzMiAxMzggQzQyIDEzMiA1OCAxMjYgNzIgMTIyIiBzdHJva2U9IiM3OTQ3MUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTgyIDEyOCBDOTUgMTMzIDExNSAxMzggMTI4IDE0MCBDMTE4IDEzMyAxMDIgMTI2IDg4IDEyMiIgc3Ryb2tlPSIjNzk0NzFFIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCAxMjUgQzgwIDEzNCA3OCAxNDQgNzUgMTUwIEM4MCAxNDUgODMgMTM2IDgzIDEyNSIgc3Ryb2tlPSIjQTA2MzM0IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8IS0tIFRyb25jbyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTcyIDEyMiBDNzAgOTUgNjIgODIgNTQgNzUgQzY2IDc5IDcyIDkwIDc1IDEyMCIgZmlsbD0iI0EwNjMzNCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNzggMTIyIEM3OSA5MiA4MSA3NiA3NCA2MiBDODIgNzIgODQgODggODQgMTIyIiBmaWxsPSIjQkE3OTQyIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04NyAxMjIgQzg5IDk1IDk4IDgzIDEwNiA3NSBDOTQgODAgODggOTIgODUgMTIwIiBmaWxsPSIjQTA2MzM0Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gRm9sbGFqZSAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMzgiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM2ODlGMzgiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjY0IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC0yNSA2NCA0NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9Ijk2IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDI1IDk2IDQ0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI1NiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iIzRDQUY1MCIgdHJhbnNmb3JtPSJyb3RhdGUoLTUwIDUwIDU2KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iMTEwIiBjeT0iNTYiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKDUwIDExMCA1NikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjQwIiBjeT0iNzQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiMyRTdEMzIiIHRyYW5zZm9ybT0icm90YXRlKC03MCA0MCA3NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjEyMCIgY3k9Ijc0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSg3MCAxMjAgNzQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIzOCIgY3k9Ijk0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNjg5RjM4IiB0cmFuc2Zvcm09InJvdGF0ZSgtODUgMzggOTQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMjIiIGN5PSI5NCIgcng9IjciIHJ5PSIxMyIgZmlsbD0iIzJFN0QzMiIgdHJhbnNmb3JtPSJyb3RhdGUoODUgMTIyIDk0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTIiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC02NSA1MiAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMDgiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDY1IDEwOCAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI2MiIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjMkU3RDMyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTUgNjIgNjIpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI5OCIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSA5OCA2MikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPCEtLSBGcnV0b3MgUm9qb3MgLS0+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjY4IiBjeT0iNjgiIHI9IjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iOTIiIGN5PSI2OCIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSI1OCIgY3k9Ijg4IiByPSI0LjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iODAiIGN5PSI1MiIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMDIiIGN5PSI4OCIgcj0iNC41IiBmaWxsPSIjRDMyRjJGIi8+CiAgICAgICAgICAgICAgICAgICAgPC9zdmc+Cg==" alt="Logo de Jhon Fredy Caro" class="w-full h-full object-contain" width="160" height="160">
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 tracking-tight leading-[1.15] uppercase">
+                        El hombre busca su libertad guiado por sus ancestros.
+                    </h1>
+
+                    <p class="mt-6 text-base sm:text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+                        Espacio clínico dedicado a desatar las lealtades invisibles, sanar las heridas de la infancia, resignificar el vínculo con nuestra madre y soltar con respeto los duelos afectivos.
+                    </p>
+
+                    <!-- Botones de Navegación Rápida a las Secciones -->
+                    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+                        <button onclick="switchView('ancestros')" class="px-7 py-3.5 rounded-2xl bg-arbol-verdeOscuro hover:bg-emerald-900 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all flex items-center space-x-2">
+                            <i class="fa-solid fa-dna"></i>
+                            <span>Ver Ancestros</span>
+                        </button>
+                        <button onclick="switchView('madre')" class="px-7 py-3.5 rounded-2xl bg-[#133A52] hover:bg-[#0d2738] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all flex items-center space-x-2">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Vínculo Materno</span>
+                        </button>
+                        <button onclick="switchView('duelos')" class="px-7 py-3.5 rounded-2xl bg-[#4A1D24] hover:bg-[#351419] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all flex items-center space-x-2">
+                            <i class="fa-solid fa-heart-crack"></i>
+                            <span>Exparejas & Duelos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen de los Grandes Ejes Clínicos -->
+            <div class="max-w-7xl mx-auto px-6 py-20">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-xs uppercase font-extrabold tracking-widest text-arbol-verdeOscuro">Estructura del Acompañamiento</span>
+                    <h2 class="text-2xl sm:text-4xl font-serif font-bold text-gray-900 mt-2">Áreas de Transformación Clínica</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Tarjeta 1 -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-200/80 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-arbol-verdeOscuro/10 text-arbol-verdeOscuro flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <span class="text-[11px] uppercase tracking-widest text-arbol-verdeOscuro font-extrabold block">Sección Especializada</span>
+                            <h3 class="text-xl font-serif font-bold text-gray-900">Los Ancestros y la Psicogenealogía</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed font-light">
+                                Comprende el síndrome de aniversario, las deudas inconscientes y cómo la historia no resuelta de tu familia repercute en tu presente.
+                            </p>
+                        </div>
+                        <button onclick="switchView('ancestros')" class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-arbol-verdeOscuro font-bold text-xs uppercase tracking-wider hover:translate-x-1 transition-transform">
+                            <span>Ingresar a Ancestros</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-200/80 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-800 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-dove"></i>
+                            </div>
+                            <span class="text-[11px] uppercase tracking-widest text-sky-800 font-extrabold block">Sección Especializada</span>
+                            <h3 class="text-xl font-serif font-bold text-gray-900">Soltar el Hogar y la Madre</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed font-light">
+                                La llave maestra para nuestra autonomía. Superar miedos al abandono, la sobreprotección y emprender nuestro propio vuelo con dignidad.
+                            </p>
+                        </div>
+                        <button onclick="switchView('madre')" class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-sky-800 font-bold text-xs uppercase tracking-wider hover:translate-x-1 transition-transform">
+                            <span>Ingresar a Vínculo Materno</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-200/80 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-red-100 text-arbol-fruto flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-heart-crack"></i>
+                            </div>
+                            <span class="text-[11px] uppercase tracking-widest text-arbol-fruto font-extrabold block">Sección Especializada</span>
+                            <h3 class="text-xl font-serif font-bold text-gray-900">Exparejas y Duelos Pendientes</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed font-light">
+                                Dejar atrás el rencor, el resentimiento y la fantasía de lo que "pudo ser". Cierra de raíz los ciclos amorosos para abrirte al porvenir.
+                            </p>
+                        </div>
+                        <button onclick="switchView('duelos')" class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-arbol-fruto font-bold text-xs uppercase tracking-wider hover:translate-x-1 transition-transform">
+                            <span>Ingresar a Duelos</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila de contacto rápido al pie del inicio -->
+            <div class="bg-bosque text-white py-12">
+                <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-arbol-verdeClaro font-bold">Atención Clínica Inmediata</span>
+                        <h4 class="text-xl font-serif font-bold mt-1">¿Deseas iniciar tu proceso psicoterapéutico?</h4>
+                        <p class="text-xs text-stone-300">Atención personalizada en Colombia y sesiones virtuales internacionales.</p>
+                    </div>
+                    <button onclick="switchView('contacto')" class="px-6 py-3 rounded-xl bg-arbol-verdeClaro hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Contactar al Psicólogo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: ANCESTROS & PSICOGENEALOGÍA ================= -->
+        <section id="view-ancestros" class="view-panel hidden">
+            
+            <!-- Encabezado de Sección Delineado -->
+            <div class="bg-gradient-to-r from-bosque to-[#173a2b] text-white py-16">
+                <div class="max-w-5xl mx-auto px-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/10 text-arbol-verdeClaro text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-dna"></i>
+                        <span>Psicogenealogía y Transgeneracional</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold">
+                        ¿Por qué nos duelen nuestros ancestros?
+                    </h2>
+                    <p class="mt-4 text-stone-300 text-base max-w-2xl font-light">
+                        "El hombre busca su libertad guiado por sus ancestros. Somos menos libres de lo que creemos, pero tenemos la posibilidad de conquistar nuestra libertad."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contenido Principal de la Sección -->
+            <div class="max-w-5xl mx-auto px-6 py-16 space-y-12">
+                
+                <!-- Tarjeta de Estudio Clínico -->
+                <div class="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200 shadow-xl space-y-6">
+                    <div class="border-b border-stone-200 pb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-arbol-verdeOscuro">Entrevista Exclusiva</span>
+                            <h3 class="text-2xl font-serif font-bold text-gray-900 mt-1">Dra. Anne Ancelin Schützenberger</h3>
+                            <p class="text-xs text-gray-500">Pionera del Genosociograma y el Síndrome de Aniversario · Revista Nouvelles Clés</p>
+                        </div>
+                        <button onclick="openModal('modal-ancestros')" class="px-5 py-2.5 rounded-xl bg-arbol-verdeOscuro hover:bg-emerald-900 text-white font-bold text-xs uppercase tracking-wider flex items-center space-x-2 shadow-sm">
+                            <i class="fa-solid fa-expand"></i>
+                            <span>Modo Pantalla Completa</span>
+                        </button>
+                    </div>
+
+                    <!-- Texto de la Entrevista formateado para lectura limpia -->
+                    <div class="prose max-w-none text-gray-700 space-y-6 leading-relaxed text-sm sm:text-base">
+                        <div class="bg-stone-50 p-6 rounded-2xl border-l-4 border-arbol-verdeOscuro">
+                            <p class="italic text-gray-800 font-serif text-base sm:text-lg">
+                                "La vida de cada uno de nosotros es una novela. Vivimos prisioneros de una invisible tela de araña de la que también somos uno de los directores. Si enseñáramos a nuestro tercer ojo y tercer oído a ver y comprender estas repeticiones, nuestra existencia sería más libre y sensible a lo que deberíamos ser."
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">La revelación de las repeticiones en el árbol genealógico</h4>
+                            <p>
+                                En los años setenta, al tratar a pacientes desahuciados, la Dra. Anne descubrió que las fechas de muerte, diagnósticos de enfermedad y edades de matrimonio coincidían de forma matemática a lo largo de varias generaciones. El genosociograma demostró que estas coincidencias no eran azar ni genética pura, sino <strong>lealtades inconscientes a la memoria familiar</strong>.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">El Síndrome de Aniversario y las zonas de sombra</h4>
+                            <p>
+                                Cuando por vergüenza familiar no se habla de un drama (un suicidio, un aborto oculto, un delito o la pérdida injusta de una herencia), el silencio crea una "zona de sombra". El descendiente, para colmar ese vacío y ser fiel a sus raíces, repite en su cuerpo o en su destino el drama reprimido.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-2">Liberarse del destino repetitivo</h4>
+                            <p>
+                                Para curarse de la repetición, primero hay que hacerla consciente. Al dibujar el genosociograma y nombrar lo callado, el paciente devuelve simbólicamente la carga a quien le correspondía y conquista su verdadero libre albedrío.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <span class="text-xs text-gray-500">¿Sientes que repites un patrón familiar?</span>
+                        <a href="https://wa.me/573183332539?text=Hola%20Dr.%20Jhon%20Fredy%20Caro,%20quiero%20consultar%20sobre%20mi%20%C3%A1rbol%20geneal%C3%B3gico%20y%20ancestros" target="_blank" class="px-6 py-3 rounded-xl bg-arbol-verdeOscuro text-white text-xs font-bold uppercase tracking-wider flex items-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Consultar Caso con Jhon Fredy Caro</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: VÍNCULO MATERNO ================= -->
+        <section id="view-madre" class="view-panel hidden">
+            
+            <div class="bg-gradient-to-r from-[#133A52] to-[#1C4D6B] text-white py-16">
+                <div class="max-w-5xl mx-auto px-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/10 text-cyan-200 text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Relación Materna & Autonomía</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold">
+                        Soltar el hogar para volar nuestro propio vuelo
+                    </h2>
+                    <p class="mt-4 text-cyan-100 text-base max-w-2xl font-light">
+                        "Soltar nuestro hogar nos genera muchos miedos, ya sea por abandonos, sobreprotección o por falta de amor; sin embargo, nuestra madre es quien tiene la llave maestra para nuestra libertad."
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 py-16 space-y-10">
+                
+                <!-- Tarjeta del Poema con Estética Editorial -->
+                <div class="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200 shadow-xl space-y-8">
+                    <div class="text-center max-w-xl mx-auto border-b border-stone-200 pb-6">
+                        <span class="text-xs uppercase tracking-widest text-[#133A52] font-extrabold">Obra de Felipe Magaña</span>
+                        <h3 class="text-3xl font-serif font-bold text-gray-900 mt-1">Poema: "Carta a mi Madre"</h3>
+                        <p class="text-xs text-gray-500 mt-2 italic">Una súplica de madurez, amor sano y libertad existencial.</p>
+                    </div>
+
+                    <div class="space-y-6 font-serif text-gray-800 text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
+                        <p class="p-4 bg-sky-50/50 rounded-2xl">
+                            Tan solo por placer no me concibas.<br>
+                            Tampoco para fines egoístas.<br>
+                            Prepárate consciente de que "soy"<br>
+                            aun antes de latir en tus entrañas.
+                        </p>
+
+                        <p>
+                            Para que yo me integre felizmente<br>
+                            allá en el claustro de tu bendito vientre.<br>
+                            Te pido, por favor, madre adorada,<br>
+                            que, al concebirme..., estés enamorada.
+                        </p>
+
+                        <p class="p-4 bg-sky-50/50 rounded-2xl">
+                            Lléname de tu amor, y sé consciente<br>
+                            de que soy un ser humano que no es tuyo.<br>
+                            Haz que me sienta libre como el viento,<br>
+                            si me das con tu amor también respeto.
+                        </p>
+
+                        <p>
+                            Si me respetas, madre, está segura<br>
+                            de que nunca sufriré en la amargura.<br>
+                            Pues he de amar a todas las criaturas<br>
+                            respetando el derecho de sus vidas.
+                        </p>
+
+                        <p class="p-4 bg-sky-50/50 rounded-2xl">
+                            No permitas jamás que sea tu amo<br>
+                            ni tampoco tu esclavo, lo suplico.<br>
+                            Hazme fuerte, no mimes mis caprichos;<br>
+                            ¡que tu bendito amor no me haga daño!
+                        </p>
+
+                        <p>
+                            No permitas pereza en mi conducta.<br>
+                            No me sobreprotejas, te lo imploro.<br>
+                            No me eduques con premios y castigos,<br>
+                            Enséñame a pensar, a ser yo mismo.
+                        </p>
+
+                        <p class="p-4 bg-sky-50/50 rounded-2xl">
+                            Haz que mi mente vuele al infinito<br>
+                            y que mis pies se afirmen en el suelo.<br>
+                            Para que aprenda a amar lo divino<br>
+                            y para hacer consciencia en este mundo.
+                        </p>
+
+                        <p>
+                            Enséñame a luchar por mis anhelos.<br>
+                            Que prenda que, en la vida, todo cuesta,<br>
+                            inculcándome amor por mis trabajos<br>
+                            como una bendición, nunca como una pena.
+                        </p>
+
+                        <p class="p-4 bg-sky-50/50 rounded-2xl">
+                            Enséñame a vivir aquí y ahora,<br>
+                            jamás en los ayeres o mañanas.<br>
+                            Hazme aprender a dar sin esperanza<br>
+                            para entregar mi amor sin desconfianza.
+                        </p>
+
+                        <p class="font-bold text-gray-900 border-t-2 border-stone-200 pt-6">
+                            Respétate, sé digna y responsable.<br>
+                            No dependas de nada, ni de nadie.<br>
+                            Sé valiente, no temas a la vida,<br>
+                            para que seas la luz de mi existencia.
+                        </p>
+                    </div>
+
+                    <div class="text-center pt-6 border-t border-stone-200">
+                        <a href="https://wa.me/573183332539?text=Hola%20Dr.%20Jhon%20Fredy%20Caro,%20deseo%20trabajar%20terap%C3%A9uticamente%20el%20v%C3%ADnculo%20con%20mi%20madre" target="_blank" class="inline-flex items-center space-x-2 px-8 py-3.5 rounded-xl bg-[#133A52] hover:bg-sky-900 text-white font-bold text-xs uppercase tracking-wider shadow-md">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Sanar el vínculo materno en sesión</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: EXPAREJAS & DUELOS ================= -->
+        <section id="view-duelos" class="view-panel hidden">
+            
+            <div class="bg-gradient-to-r from-[#4A1D24] to-[#692934] text-white py-16">
+                <div class="max-w-5xl mx-auto px-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/10 text-red-200 text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-heart-crack"></i>
+                        <span>Cierre de Vínculos & Duelos Afectivos</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold">
+                        Exparejas: Duelos No Gestionados
+                    </h2>
+                    <p class="mt-4 text-red-100 text-base max-w-2xl font-light">
+                        "No cerrar los vínculos con exparejas, guardar rabia, resentimiento o pensar en lo que pudo ser y no fue en una relación sentimental nos hace mucho daño para continuar nuestra vida."
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-6 py-16 space-y-12">
+                
+                <div class="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200 shadow-xl space-y-8">
+                    <div class="border-b border-stone-200 pb-6">
+                        <span class="text-xs uppercase tracking-widest text-arbol-fruto font-extrabold">Artículo de Autoría</span>
+                        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mt-1">
+                            Luces en el camino para soltar y volver a vivir
+                        </h3>
+                        <p class="text-xs text-gray-500 mt-1">Por Jhon Fredy Caro · Psicólogo Clínico</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-red-100 text-arbol-fruto flex items-center justify-center">
+                                <i class="fa-solid fa-link-slash"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 text-base">La Prisión del Rencor</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                Mantener reclamos constantes o alimentar rencor hacia un ex sólo prolonga el lazo tóxico en tu mente. Mientras sientas enojo desmedido, continúas atado a su presencia.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-red-100 text-arbol-fruto flex items-center justify-center">
+                                <i class="fa-solid fa-cloud-moon"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 text-base">La Ilusión de lo Incompleto</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                El sufrimiento muchas veces no es por la persona real, sino por la expectativa rota de lo que imaginamos que sucedería. Desmontar esa fantasía devuelve la paz.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 space-y-3">
+                            <div class="w-10 h-10 rounded-xl bg-red-100 text-arbol-fruto flex items-center justify-center">
+                                <i class="fa-solid fa-door-open"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 text-base">El Cierre Psicológico</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                El cierre no depende del perdón ni de la presencia del otro; es una decisión interna de agradecimiento por lo aprendido y devolución de lo que no te pertenece.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cuadro Clínico de Acción -->
+                    <div class="p-8 rounded-2xl bg-[#4A1D24] text-white flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <h4 class="text-xl font-serif font-bold">¿Llevas meses o años atrapado en el recuerdo de una expareja?</h4>
+                            <p class="text-xs text-red-100 max-w-xl">
+                                En sesión desarmamos los pactos inconscientes para que recuperes tu energía vital y vuelvas a sentirte disponible para ti mismo y para nuevas relaciones sanas.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/573183332539?text=Hola%20Dr.%20Jhon%20Fredy%20Caro,%20necesito%20acompa%C3%B1amiento%20para%20un%20proceso%20de%20duelo%20de%20expareja" target="_blank" class="px-6 py-3.5 rounded-xl bg-white hover:bg-stone-100 text-[#4A1D24] font-bold text-xs uppercase tracking-wider shadow-md whitespace-nowrap">
+                            Pedir Consulta de Duelo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SECCIÓN: CONTACTO & AGENDAMIENTO ================= -->
+        <section id="view-contacto" class="view-panel hidden">
+            
+            <div class="bg-gradient-to-r from-bosque to-black text-white py-16">
+                <div class="max-w-5xl mx-auto px-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/10 text-arbol-verdeClaro text-xs font-bold uppercase tracking-wider mb-4">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Canales de Atención Directa</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold">
+                        Ponte en Contacto con Jhon Fredy Caro
+                    </h2>
+                    <p class="mt-4 text-stone-300 text-base max-w-2xl font-light">
+                        Atención psicológica profesional y ética en Colombia (modalidad presencial) y modalidad virtual para cualquier ciudad o país.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-6 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Datos Directos -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="p-6 rounded-3xl bg-white border border-stone-200 shadow-md">
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-arbol-verdeOscuro block mb-4">Información Oficial</span>
+                            
+                            <div class="space-y-4">
+                                <a href="tel:3183332539" class="flex items-center space-x-4 p-3 rounded-2xl hover:bg-stone-50 transition-colors">
+                                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-arbol-verdeOscuro flex items-center justify-center text-xl flex-shrink-0">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs uppercase text-gray-500 font-bold">Línea Telefónica</span>
+                                        <span class="text-base font-bold text-gray-800">318 333 2539</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://wa.me/573183332539" target="_blank" class="flex items-center space-x-4 p-3 rounded-2xl hover:bg-stone-50 transition-colors">
+                                    <div class="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-2xl flex-shrink-0">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs uppercase text-gray-500 font-bold">WhatsApp Directo</span>
+                                        <span class="text-base font-bold text-gray-800">+57 318 333 2539</span>
+                                    </div>
+                                </a>
+
+                                <a href="mailto:jhonfredycaro@hotmail.com" class="flex items-center space-x-4 p-3 rounded-2xl hover:bg-stone-50 transition-colors">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl flex-shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <span class="block text-xs uppercase text-gray-500 font-bold">Correo Electrónico</span>
+                                        <span class="text-xs sm:text-sm font-bold text-gray-800 truncate block">jhonfredycaro@hotmail.com</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="mt-6 pt-6 border-t border-stone-100">
+                                <span class="block text-xs uppercase text-gray-500 font-bold mb-3">Redes de la consulta</span>
+                                <div class="flex items-center space-x-3">
+                                    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-blue-600 hover:text-white text-gray-700 flex items-center justify-center transition-colors">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-pink-600 hover:text-white text-gray-700 flex items-center justify-center transition-colors">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="tel:3183332539" aria-label="Llamar" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-green-600 hover:text-white text-gray-700 flex items-center justify-center transition-colors">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Redirección Rápida a WhatsApp -->
+                    <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-stone-200 shadow-xl">
+                        <h3 class="text-xl font-serif font-bold text-gray-900 mb-1">Solicitud de Consulta</h3>
+                        <p class="text-xs text-gray-500 mb-6">Completa tus datos para enviarle directamente un mensaje estructurado al WhatsApp del psicólogo.</p>
+
+                        <form onsubmit="enviarMensajeWhatsapp(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Nombre Completo</label>
+                                <input type="text" id="form-name" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-arbol-verdeOscuro text-sm outline-none">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Teléfono Móvil</label>
+                                    <input type="tel" id="form-phone" required placeholder="Ej. 318 123 4567" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-arbol-verdeOscuro text-sm outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Motivo de Interés</label>
+                                    <select id="form-topic" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-arbol-verdeOscuro text-sm bg-white outline-none">
+                                        <option value="Ancestros y Psicogenealogía">Ancestros y Psicogenealogía</option>
+                                        <option value="Vínculo con la Madre / Familia">Vínculo con la Madre / Familia</option>
+                                        <option value="Duelos y Exparejas">Duelos y Exparejas</option>
+                                        <option value="Terapia Individual General">Terapia Individual General</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Breve Mensaje</label>
+                                <textarea id="form-msg" rows="3" placeholder="Escribe aquí un resumen de tu motivo de consulta..." class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-arbol-verdeOscuro text-sm outline-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-arbol-verdeOscuro hover:bg-emerald-900 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center space-x-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Enviar Solicitud a WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOTÓN DE WHATSAPP FLOTANTE PERMANENTE -->
+    <aside class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-2">
+        <div class="hidden sm:block bg-white text-gray-800 text-xs font-bold py-1 px-3.5 rounded-full shadow-lg border border-stone-200">
+            ¿Consultar por WhatsApp? 💬
+        </div>
+        <a href="https://wa.me/573183332539?text=Hola%20Dr.%20Jhon%20Fredy%20Caro,%20quisiera%20agendar%20una%20consulta" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] hover:bg-[#20BA5C] text-white flex items-center justify-center text-3xl sm:text-4xl shadow-2xl transition-all pulse-soft focus:outline-none"
+           aria-label="Contactar por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </aside>
+
+    <!-- MODAL DE LECTURA AMPLIADA ANCESTROS -->
+    <div id="modal-ancestros" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="px-6 py-5 bg-bosque text-white flex items-center justify-between border-b border-stone-200">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-tree text-arbol-verdeClaro text-xl"></i>
+                    <div>
+                        <h3 class="font-serif font-bold text-base sm:text-lg">Anne Ancelin Schützenberger</h3>
+                        <p class="text-xs text-stone-300">¿Por qué nos duelen nuestros ancestros?</p>
+                    </div>
+                </div>
+                <button onclick="closeModal('modal-ancestros')" class="text-stone-300 hover:text-white p-2 text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 sm:p-8 overflow-y-auto custom-scroll space-y-4 text-sm text-gray-700 leading-relaxed">
+                <h4 class="font-bold text-gray-900 font-serif text-lg">El Hombre Busca su Libertad Guiado por sus Ancestros</h4>
+                <p><strong>Nouvelles Clés:</strong> Usted es psicoanalista, pero cuando recibe a un paciente le pide que dé informaciones sobre la vida de sus ancestros y escriba fechas. ¿Cómo llegó a transformar el desarrollo de la cura?</p>
+                <p><strong>Anne Ancelin Schützenberger:</strong> En los años setenta, analizaba a una joven sueca con cáncer. Vi el retrato de su madre muerta de cáncer a los 35 años. Mi paciente tenía exactamente 35 años. Esa doble coincidencia me dejó estupefacta. Les pedí a todos mis pacientes que dibujaran su árbol genealógico con fechas clave. Los árboles revelaron repeticiones asombrosas en varias generaciones.</p>
+                <p><strong>N. C.:</strong> ¿Cómo pueden explicarse tales repeticiones? ¿Por qué repetimos cosas de nuestros ancestros?</p>
+                <p><strong>A. A.-S.:</strong> Repetir los mismos hechos, fechas o edades es una forma inconsciente de honrarlos y serles leales. Cuando por vergüenza no se habla de un secreto o un drama familiar, el silencio crea una zona de sombra. El descendiente, para colmar ese vacío, repite en su cuerpo o existencia el drama oculto.</p>
+                <p><strong>N. C.:</strong> ¿Se puede salir de la repetición para nacer libremente a la propia historia?</p>
+                <p><strong>A. A.-S.:</strong> Para curarse de la repetición, primero hay que ser consciente de ella. Cuando la persona se da cuenta de la repetición mediante el árbol genealógico, puede liberarse del peso de las lealtades familiares inconscientes.</p>
+            </div>
+            <div class="px-6 py-4 bg-stone-50 border-t border-stone-200 flex justify-end">
+                <button onclick="closeModal('modal-ancestros')" class="px-5 py-2.5 rounded-xl bg-arbol-verdeOscuro text-white text-xs font-bold uppercase">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#091510] text-stone-400 py-12 text-xs border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3 text-center md:text-left">
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYwIDE2MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gUmHDrWNlcyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTc4IDEyOCBDNjUgMTMyIDQ1IDEzNiAzMiAxMzggQzQyIDEzMiA1OCAxMjYgNzIgMTIyIiBzdHJva2U9IiM3OTQ3MUUiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTgyIDEyOCBDOTUgMTMzIDExNSAxMzggMTI4IDE0MCBDMTE4IDEzMyAxMDIgMTI2IDg4IDEyMiIgc3Ryb2tlPSIjNzk0NzFFIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCAxMjUgQzgwIDEzNCA3OCAxNDQgNzUgMTUwIEM4MCAxNDUgODMgMTM2IDgzIDEyNSIgc3Ryb2tlPSIjQTA2MzM0IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8IS0tIFRyb25jbyAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTcyIDEyMiBDNzAgOTUgNjIgODIgNTQgNzUgQzY2IDc5IDcyIDkwIDc1IDEyMCIgZmlsbD0iI0EwNjMzNCIvPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNzggMTIyIEM3OSA5MiA4MSA3NiA3NCA2MiBDODIgNzIgODQgODggODQgMTIyIiBmaWxsPSIjQkE3OTQyIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04NyAxMjIgQzg5IDk1IDk4IDgzIDEwNiA3NSBDOTQgODAgODggOTIgODUgMTIwIiBmaWxsPSIjQTA2MzM0Ii8+CiAgICAgICAgICAgICAgICAgICAgICAgIDwhLS0gRm9sbGFqZSAtLT4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjgwIiBjeT0iMzgiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM2ODlGMzgiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjY0IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC0yNSA2NCA0NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9Ijk2IiBjeT0iNDQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDI1IDk2IDQ0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI1NiIgcng9IjgiIHJ5PSIxNCIgZmlsbD0iIzRDQUY1MCIgdHJhbnNmb3JtPSJyb3RhdGUoLTUwIDUwIDU2KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iMTEwIiBjeT0iNTYiIHJ4PSI4IiByeT0iMTQiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKDUwIDExMCA1NikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjQwIiBjeT0iNzQiIHJ4PSI3IiByeT0iMTMiIGZpbGw9IiMyRTdEMzIiIHRyYW5zZm9ybT0icm90YXRlKC03MCA0MCA3NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGVsbGlwc2UgY3g9IjEyMCIgY3k9Ijc0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSg3MCAxMjAgNzQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIzOCIgY3k9Ijk0IiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNjg5RjM4IiB0cmFuc2Zvcm09InJvdGF0ZSgtODUgMzggOTQpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMjIiIGN5PSI5NCIgcng9IjciIHJ5PSIxMyIgZmlsbD0iIzJFN0QzMiIgdHJhbnNmb3JtPSJyb3RhdGUoODUgMTIyIDk0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8ZWxsaXBzZSBjeD0iNTIiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM4QkMzNEEiIHRyYW5zZm9ybT0icm90YXRlKC02NSA1MiAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSIxMDgiIGN5PSIxMDUiIHJ4PSI2IiByeT0iMTIiIGZpbGw9IiM2ODlGMzgiIHRyYW5zZm9ybT0icm90YXRlKDY1IDEwOCAxMDUpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI2MiIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjMkU3RDMyIiB0cmFuc2Zvcm09InJvdGF0ZSgtMTUgNjIgNjIpIi8+CiAgICAgICAgICAgICAgICAgICAgICAgIDxlbGxpcHNlIGN4PSI5OCIgY3k9IjYyIiByeD0iNyIgcnk9IjEzIiBmaWxsPSIjNENBRjUwIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSA5OCA2MikiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPCEtLSBGcnV0b3MgUm9qb3MgLS0+CiAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjY4IiBjeT0iNjgiIHI9IjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iOTIiIGN5PSI2OCIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSI1OCIgY3k9Ijg4IiByPSI0LjUiIGZpbGw9IiNEMzJGMkYiLz4KICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBjeD0iODAiIGN5PSI1MiIgcj0iNSIgZmlsbD0iI0QzMkYyRiIvPgogICAgICAgICAgICAgICAgICAgICAgICA8Y2lyY2xlIGN4PSIxMDIiIGN5PSI4OCIgcj0iNC41IiBmaWxsPSIjRDMyRjJGIi8+CiAgICAgICAgICAgICAgICAgICAgPC9zdmc+Cg==" alt="Logo de Jhon Fredy Caro" width="40" height="40" class="w-10 h-10 object-contain">
+                </div>
+                <div>
+                    <span class="block font-serif font-bold text-white text-sm">Jhon Fredy Caro</span>
+                    <span>Psicólogo Clínico · Barranquilla & Toda Colombia</span>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right space-y-1">
+                <p>Tel: <a href="tel:3183332539" class="text-white hover:text-arbol-verdeClaro">318 333 2539</a> | Email: <a href="mailto:jhonfredycaro@hotmail.com" class="text-white hover:text-arbol-verdeClaro">jhonfredycaro@hotmail.com</a></p>
+                <p class="text-stone-500">© Todos los derechos reservados · Psicoterapia Sistémica y Transgeneracional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para cambiar de sección estilo multipágina
+        function switchView(viewId) {
+            // Ocultar todas las secciones
+            const views = document.querySelectorAll('.view-panel');
+            views.forEach(v => v.classList.add('hidden'));
+
+            // Mostrar la sección elegida
+            const target = document.getElementById('view-' + viewId);
+            if (target) {
+                target.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Actualizar estilo de pestañas de navegación
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('text-arbol-verdeOscuro', 'bg-arbol-verdeOscuro/10', 'font-bold');
+                tab.classList.add('hover:text-arbol-verdeOscuro', 'hover:bg-stone-100');
+            });
+
+            const currentTab = document.getElementById('tab-' + viewId);
+            if (currentTab) {
+                currentTab.classList.add('text-arbol-verdeOscuro', 'bg-arbol-verdeOscuro/10', 'font-bold');
+                currentTab.classList.remove('hover:text-arbol-verdeOscuro', 'hover:bg-stone-100');
+            }
+        }
+
+        // Control Menú Móvil
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileDropdown = document.getElementById('mobile-dropdown');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileDropdown.classList.toggle('hidden');
+        });
+
+        function closeMobileMenu() {
+            mobileDropdown.classList.add('hidden');
+        }
+
+        // Modales
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Enviar Formulario hacia WhatsApp
+        function enviarMensajeWhatsapp(event) {
+            event.preventDefault();
+            const name = document.getElementById('form-name').value.trim();
+            const phone = document.getElementById('form-phone').value.trim();
+            const topic = document.getElementById('form-topic').value;
+            const msg = document.getElementById('form-msg').value.trim();
+
+            const textoFinal = `Hola Dr. Jhon Fredy Caro,%0A%0AMi nombre es *${encodeURIComponent(name)}* (Tel: ${encodeURIComponent(phone)}).%0A*Motivo:* ${encodeURIComponent(topic)}.%0A*Mensaje:* ${encodeURIComponent(msg || 'Deseo solicitar información para una sesión')}.`;
+            
+            const url = `https://wa.me/573183332539?text=${textoFinal}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
